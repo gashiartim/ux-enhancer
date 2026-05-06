@@ -16,8 +16,16 @@ Triggers when you share a React component and want to:
 
 ## Install
 
+Via the [skills.sh](https://skills.sh) CLI:
+
 ```bash
-git clone https://github.com/gashiartim/ux-enhancer-skill.git ~/.claude/skills/ux-enhancer
+npx skills add gashiartim/ux-enhancer
+```
+
+Or clone manually:
+
+```bash
+git clone https://github.com/gashiartim/ux-enhancer.git ~/.claude/skills/ux-enhancer
 ```
 
 Then in Claude Code, the skill auto-triggers on UX-related requests, or invoke explicitly:
