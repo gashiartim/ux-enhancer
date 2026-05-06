@@ -1,0 +1,26 @@
+{
+  "skill_name": "ux-enhancer",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "account-profile-form",
+      "prompt": "Can you UX-enhance AccountProfileForm.tsx? The read-only fields (email, role) look identical to editable ones and I'm not sure the save/change-password button hierarchy is right. File: src/components/settings/AccountProfileForm.tsx",
+      "expected_output": "Refactored component that visually distinguishes read-only from editable fields, makes Save the clear primary action, and reduces any unnecessary copy. Plus a short UX improvements list.",
+      "files": ["src/components/settings/AccountProfileForm.tsx"]
+    },
+    {
+      "id": 2,
+      "eval_name": "appearance-settings",
+      "prompt": "Please UX-review and refactor AppearanceSettings.tsx. File: src/modules/settings/AppearanceSettings.tsx",
+      "expected_output": "Refactored component that removes redundant labels, clarifies the theme selection state, and reduces visual noise. Plus a short UX improvements list.",
+      "files": ["src/modules/settings/AppearanceSettings.tsx"]
+    },
+    {
+      "id": 3,
+      "eval_name": "settings-tabs",
+      "prompt": "Can you look at the settings page in src/pages/settings/index.tsx and improve the UX? Specifically the tab navigation — it uses a complex responsive grid className and has conditional tab visibility.",
+      "expected_output": "Refactored tab navigation that is simpler, clearly shows the active state, and handles conditional tabs cleanly. Plus a short UX improvements list.",
+      "files": ["src/pages/settings/index.tsx"]
+    }
+  ]
+}
