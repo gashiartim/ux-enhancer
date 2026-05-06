@@ -34,6 +34,12 @@ Then in Claude Code, the skill auto-triggers on UX-related requests, or invoke e
 /ux-enhancer
 ```
 
+## What's inside
+
+- `SKILL.md` — main skill instructions, decision tree, anti-pattern cheat sheet
+- `references/copy-rewrite-patterns.md` — lookup table for verbose UI copy → tightened replacements
+- `examples/` — full before/after React refactors (form, empty state)
+
 ## License
 
 MIT
