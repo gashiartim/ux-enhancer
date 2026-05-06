@@ -2,7 +2,7 @@
 
 Claude Code skill. UX/UI refactor specialist for React components. Applies Steve Krug's *Don't Make Me Think* principles — visual hierarchy, scanning-optimized layout, ruthless copy reduction, unambiguous CTAs.
 
-Originally built for [Reliva](https://reliva.app) (a dental practice SaaS), but the core UX rules apply to any task-driven web app. The Design System section is Reliva-specific — adapt it to your own component library.
+Framework-agnostic: auto-detects whatever design system your project uses (shadcn/ui, Material UI, Chakra, Mantine, Ant Design, or a custom in-house library) and prefers existing components over reinventing primitives.
 
 ## What it does
 
@@ -25,10 +25,6 @@ Then in Claude Code, the skill auto-triggers on UX-related requests, or invoke e
 ```
 /ux-enhancer
 ```
-
-## Customize
-
-Edit `SKILL.md` and replace the **Reliva Design System** section with your own DS components (e.g. shadcn/ui, Material, your custom library). The principles above that section are framework-agnostic.
 
 ## License
 
