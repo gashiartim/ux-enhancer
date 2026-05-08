@@ -1,6 +1,6 @@
 # Example: Patient profile form refactor
 
-A typical settings/profile form refactor. Shows the most common ux-enhancer transformations: deleting happy talk, tightening labels, surfacing the primary CTA, and using DS state primitives.
+Typical settings/profile form. Shows the most common ux-enhancer transformations: deleting happy talk, tightening labels, surfacing the primary CTA, using DS state primitives, and proper error/loading handling.
 
 ## Before
 
@@ -60,9 +60,9 @@ export function PatientProfileForm({ patient }: { patient: Patient }) {
         {error && <FormErrorBanner>{error}</FormErrorBanner>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <Field label="First name" name="firstName" defaultValue={patient.firstName} />
-          <Field label="Last name"  name="lastName"  defaultValue={patient.lastName} />
-          <Field label="Email"      name="email" type="email" defaultValue={patient.email} />
+          <Field label="First name" name="firstName" defaultValue={patient.firstName} required />
+          <Field label="Last name"  name="lastName"  defaultValue={patient.lastName}  required />
+          <Field label="Email"      name="email" type="email" defaultValue={patient.email} required />
           <Field label="Phone"      name="phone" hint="Optional" defaultValue={patient.phone} />
 
           <div className="flex justify-end gap-2 pt-2">
@@ -78,10 +78,11 @@ export function PatientProfileForm({ patient }: { patient: Patient }) {
 
 **UX Improvements:**
 
-- Deleted happy-talk paragraph → users scan, they don't read intros (Krug: omit needless words).
-- Compressed labels (`Please enter your first name` → `First name`) → reduces reading load.
+- Deleted happy-talk paragraph and "Welcome to your profile!" heading → users scan, they don't read intros (Krug: omit needless words).
+- Compressed labels (`Please enter your first name` → `First name`) → reduces reading load while staying specific.
+- Marked required fields explicitly with `required` prop instead of leaving validation implicit → surfaces constraints up front (Krug: forms forgiving and obvious).
 - Replaced inline `<Spinner />` with `ButtonLoading` → loading state lives where the action is, not floating in the form.
-- Replaced raw error `<div>` with `FormErrorBanner` → consistent error UX, semantic styling.
-- Promoted `Save` (primary) over `Cancel` (ghost) → primary action is now visually distinct.
-- Wrapped in `Card` + `Typography` → DS hierarchy instead of ad-hoc `text-2xl font-bold`.
+- Replaced raw error `<div>` with `FormErrorBanner` → consistent error UX, semantic for screen readers.
+- Promoted `Save` (primary) over `Cancel` (ghost) → primary action visually distinct.
 - Renamed `Submit changes` → `Save` → button states the verb of what happens, not the form mechanic.
+- Wrapped in `Card` + `Typography` → DS hierarchy instead of ad-hoc `text-2xl font-bold`.
