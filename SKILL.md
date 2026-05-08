@@ -51,7 +51,12 @@ If you can't identify a primary action, the screen is doing too much — flag it
 
 ### 3. Audit cognitive friction
 
-Walk the **red flags checklist** (below). Note every hit. Don't fix yet — just inventory.
+Walk the **red flags checklist** (below) AND the smell catalog at `references/component-smell-catalog.md`. Note every hit. Don't fix yet — just inventory.
+
+**Triage rules:**
+- Sort hits by severity: Blocker → High → Medium → Low.
+- Fix Blockers and High first. Do not refactor cosmetic / Low issues while a Blocker exists.
+- Tie every major change in the output bullets to a specific smell name (e.g. "Vague button smell") or a Krug principle.
 
 ### 4. Refactor in this order
 
@@ -227,7 +232,7 @@ See `references/copy-rewrite-patterns.md` for the full lookup table.
 | Destructive action same color as safe | Destructive = red/destructive variant + confirmation modal |
 | Disabled button with no explanation | Add inline hint or tooltip explaining *why* |
 
-See `references/ux-audit-checklist.md` for the full operational checklist and `examples/` for full before/after refactors.
+See `references/ux-audit-checklist.md` for the full operational checklist, `references/component-smell-catalog.md` for the named-smell catalog with severity, and `examples/` for full before/after refactors (form, empty state, destructive modal, search/filter, checkout, navigation).
 
 ## Output format
 

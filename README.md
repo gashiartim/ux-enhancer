@@ -116,7 +116,7 @@ Example output structure:
 <Button type="submit">Save</Button>
 ```
 
-See [`examples/`](./examples) for full before/after refactors of forms, empty states, destructive modals, and search/filter toolbars.
+See [`examples/`](./examples) for full before/after refactors of forms, empty states, destructive modals, search/filter toolbars, checkout flows, and dashboard navigation.
 
 ## Compatibility
 
@@ -136,7 +136,8 @@ If no DS exists, the skill suggests primitives in inline comments (`// New patte
 - [`SKILL.md`](./SKILL.md) — main instructions, workflow, checklists, output format
 - [`references/copy-rewrite-patterns.md`](./references/copy-rewrite-patterns.md) — verbose copy → tightened lookup table
 - [`references/ux-audit-checklist.md`](./references/ux-audit-checklist.md) — operational checklist for auditing components
-- [`examples/`](./examples) — full before/after React refactors
+- [`references/component-smell-catalog.md`](./references/component-smell-catalog.md) — 15 named UX smells with severity and refactor rules
+- [`examples/`](./examples) — before/after React refactors: form, empty state, destructive modal, search/filter, checkout, navigation
 
 ## Contributing
 
